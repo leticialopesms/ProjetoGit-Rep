@@ -40,35 +40,7 @@ const int MAX_N = 1000000007;
 
 
 void solve(){
-    queue <int> fila;
-    mii mapa;
-    int n, ai, repetidos = 0, movimentos = 0;
-    cin >> n;
-    
-    cout << repetidos << endl;
-    
-    for (int i = 0; i < n; i++) {
-        cin >> ai;
-        fila.push(ai);
-        mapa[ai]++;
-        if (mapa[ai] >1)
-            repetidos++;
-    }
-    
-    cout << "repetidos: " << repetidos << endl;
-    for (auto u : mapa) {
-        cout << u.first << ": " << u.second << endl;
-    }
-    
-    while (!fila.empty() && repetidos > 0) {
-        cout << fila.front() << '\t';
-        repetidos--;
-        mapa[fila.front()]--;
-        movimentos++;
-        fila.pop();
-    }
-    cout << endl;
-    cout << "movimentos: " << movimentos << endl;
+
 }
 
 int main(){
